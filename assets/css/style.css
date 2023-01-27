@@ -1,0 +1,302 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "TitilliumWeb-ExtraLight";
+    src: url(../fonts/TitilliumWeb-SemiBold.ttf);
+}
+
+body {
+    animation-name: Opacidad;
+    animation-iteration-count: 1;
+    animation-duration: 3s;
+    font-family: "TitilliumWeb-ExtraLight";
+    background-color: black;
+    background: url(../images/background2.png) fixed center;
+    background-image: url(../images/background2.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer section a {
+    color: rgb(225, 225, 225);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer section a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: rgb(203, 0, 68);
+    margin: auto;
+    display: block;
+}
+
+footer section a:hover::after {
+    width: 100%;
+    transition: width 0.5s linear;
+}
+
+
+
+@keyframes Opacidad {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+
+
+/* MENU */
+nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.nav-links a {
+    color: rgb(225, 225, 225);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.nav-links a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: rgb(203, 0, 68);
+    margin: auto;
+    display: block;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    transition: width 0.5s linear;
+}
+
+
+
+
+
+/* INICIO */
+main h1 {
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+main a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 15px;
+    animation-name: tienda;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+}
+
+main a:hover {
+    background-color: rgb(203, 0, 68);
+    transition: 1s;
+}
+
+.cajatitulo {
+    width: 500rem;
+    justify-content: center;
+}
+.titulo {
+    margin-left: 26rem;
+}
+.tienda {
+    margin-left: 45rem;
+}
+
+
+
+
+
+/*MAS VENDIDOS*/
+h2 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+main section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.populares {
+    background-color: black;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: rgb(38, 199, 89);
+    font-weight: bold;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form button {
+    color: white;
+    background-color: black;
+    border-style: solid;
+    border-color: white;
+}
+
+#carrito {
+    color: white;
+    background-color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+    footer {
+        margin: 10vh 20vh;
+    }
+    footer section a{
+        font-size: 18px;
+    }
+    /* MENU */
+    nav {
+        margin: 5vh 20vh;
+    }
+    .nav-links {
+        width: 55%;
+    }
+    #logo {
+        width: 80px;
+    }
+    .nav-links a {
+        font-size: 14px;
+    }
+    /* INICIO */
+    main {
+        margin-top: 15vh;
+    }
+    main h1{
+        margin: 2vh 20vh 6vh 20vh;
+        font-size: 40px;
+        width: 35%;
+    }
+    main a{
+        margin: 2vh 20vh;
+        font-size: 20px;
+        padding: 5px 15px;
+    }
+    /*MÁS VENDIDOS*/
+    h2 {
+        margin: 20vh 20vh 5vh 78vh;
+        font-size: 50px;
+    }
+    main section {
+        margin: 15vh 20vh;
+    }
+    #flips {
+        padding: 55px 35px;
+    }
+    #cocacola {
+        padding: 56px 35px;
+    }
+    #lays {
+        padding: 50px 28px;
+    }
+    #beldent {
+        padding: 55px 40px;
+    }
+    #marlboro {
+        padding: 55px 40px;
+    }
+    #oreo {
+        padding: 55px 40px;
+    }
+    .lays {
+        height: 23.25rem;
+    }
+    .flips {
+        height: 23.25rem;
+        width: 16rem;
+        margin-left: 2.8rem ;
+    }
+    .oreo {
+        height: 22.5rem;
+        width: 20rem;
+        margin-left: 1rem;
+    }
+    
+    .form h4{
+        padding: 10px;
+        font-size: 18px;
+    }
+    .form button {
+        padding: 5px 10px;
+        font-size: 15px;
+    }
+    #carrito {
+        padding: 100px 400px;
+    }
+    .separar{
+        padding: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
